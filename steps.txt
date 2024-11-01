@@ -1,0 +1,11 @@
+If virtual environment not activated:
+env\scripts\activate
+
+to deactivate environment:
+env\scripts\deactivate
+
+
+step by step:
+cd Safe_Food
+python manage.py runserver
+
