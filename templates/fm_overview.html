@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Farm Manager</title>
+    <!-- Montserrat Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Apply Montserrat globally */
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar (similar to index.html) -->
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="farm_manager_dashboard.html">Farm Manager</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="farm_manager_dashboard.html">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- Overview Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Overview</h2>
+
+    <!-- Stat Cards -->
+    <div class="row g-4">
+        <!-- Total Crops Card -->
+        <div class="col-md-3">
+            <div class="card text-center bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Total Crops</h5>
+                    <p class="card-text fs-3">150</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inventory Items Card -->
+        <div class="col-md-3">
+            <div class="card text-center bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory Items</h5>
+                    <p class="card-text fs-3">80</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Harvested Last Month Card -->
+        <div class="col-md-3">
+            <div class="card text-center bg-warning text-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Harvested Last Month</h5>
+                    <p class="card-text fs-3">2000 kg</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue Card -->
+        <div class="col-md-3">
+            <div class="card text-center bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Revenue</h5>
+                    <p class="card-text fs-3">$25,000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart Placeholder -->
+    <div class="my-5">
+        <h3>Performance Chart</h3>
+        <div class="chart-placeholder bg-light border" style="height: 300px; display: flex; align-items: center; justify-content: center;">
+            <p>Chart Placeholder (e.g., Trends in Harvested Crops)</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

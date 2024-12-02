@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Farm Manager</title>
+    <!-- Montserrat Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="farm_manager_dashboard.html">Farm Manager</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="farm_manager_dashboard.html">Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Reports</h2>
+
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <select class="form-select" aria-label="Select Report Type">
+                <option selected>Select Report Type</option>
+                <option value="1">Monthly Sales</option>
+                <option value="2">Inventory Status</option>
+                <option value="3">Harvest Summary</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <input type="month" class="form-control" aria-label="Select Month">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary w-100">Generate Report</button>
+        </div>
+    </div>
+
+    <div class="table-responsive mb-5">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Report ID</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RPT001</td>
+                    <td>Monthly Sales for August</td>
+                    <td>2024-08-31</td>
+                    <td>$15,000</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>RPT002</td>
+                    <td>Inventory Status as of September</td>
+                    <td>2024-09-15</td>
+                    <td>-</td>
+                    <td>Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="my-5">
+        <h3 class="text-center">Report Chart</h3>
+        <canvas id="reportChart" class="bg-light border" style="height: 300px;"></canvas>
+    </div>
+</div>
+
+<script>
+    // Chart.js Configuration
+    const ctx = document.getElementById('reportChart').getContext('2d');
+    const reportChart = new Chart(ctx, {
+        type: 'bar', // Chart type
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May'], // X-axis labels
+            datasets: [{
+                label: 'Monthly Revenue ($)',
+                data: [12000, 15000, 13000, 17000, 19000], // Y-axis data
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

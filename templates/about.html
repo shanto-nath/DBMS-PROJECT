@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{%load static%}
+
+{%block title%} <title>About Us</title>{% endblock %}
+
+
+{%block about%}
+{% include 'partials/_about.html' %}
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" style="max-width: 600px;">
+            <h1 class="mb-3">Contact With Our Team</h1>
+            <p>If you have any query don't worry. We have a dedicated team for you</p>
+        </div>
+        <div class="row justify-content-center g-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative" style="width: 100%; height: 400px;">
+                        <img class="img-fluid" src="{% static 'img/nahin.jpg' %}" alt="Team member photo" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/ji.nahin.31"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="mailto:2210514@iub.edu.bd"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Md Jamiul Islam Nahin</h5>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative" style="width: 100%; height: 400px;">
+                        <img class="img-fluid" src="{% static 'img/shanto.jpg' %}" alt="Team member photo" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/Land.L.Tailorr?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="mailto:2211105@iub.edu.bd"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Shanto Deb Nath</h5>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative" style="width: 100%; height: 400px;">
+                        <img class="img-fluid" src="{% static 'img/polok.jpg' %}" alt="Team member photo" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/promit.chowhan?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="mailto:2210280@iub.edu.bd"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Promit Chowhan Polok</h5>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative" style="width: 100%; height: 400px;">
+                        <img class="img-fluid" src="{% static 'img/akash.jpg' %}" alt="Team member photo" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/NafizulAkash?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="mailto:1910304@iub.edu.bd"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Nafizul Islam Akash</h5>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="team-item rounded overflow-hidden">
+                    <div class="position-relative" style="width: 100%; height: 400px;">
+                        <img class="img-fluid" src="{% static 'img/basma.jpg' %}" alt="Team member photo" 
+                             style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                            <a class="btn btn-square mx-1" href="https://www.facebook.com/basma.rahim.3?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href="mailto:1711135@iub.edu.bd"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 mt-3">
+                        <h5 class="fw-bold mb-0">Basma Rahim</h5>
+                        <small>Student</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+        
+{%endblock%}

@@ -1,0 +1,78 @@
+{%load static%}
+
+<!-- About Start -->
+<style>
+    .about-section {
+        padding: 30px;
+        background-color: var(--light);
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        color: var(--dark);
+    }
+
+    .about-section h1 {
+        font-size: 2.2rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        color: var(--dark);
+    }
+
+    .about-points {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-points li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 1rem;
+        margin: 15px 0;
+        color: var(--dark);
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .about-points li::before {
+        content: "✔";
+        color: var(--primary);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 1.3rem;
+    }
+</style>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                    <img class="img-fluid w-100" src="{% static 'img/about.jpg' %}" alt="About Farm2Fork">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn about-section d-flex flex-column justify-content-center" data-wow-delay="0.5s">
+                <h1 class="mb-4">#1 Place To Find Authentic Products</h1>
+                <p class="mb-4">
+                    At Farm2Fork, we prioritize quality, transparency, and sustainability to bring you genuine products. Here’s what sets us apart:
+                </p>
+                <ul class="about-points">
+                    <li><strong>Verified Sources:</strong> Only trusted farmers and suppliers ensure authenticity.</li>
+                    <li><strong>Full Transparency:</strong> Track each product’s journey from origin to delivery.</li>
+                    <li><strong>Quality Assurance:</strong> Rigorous quality checks for maximum freshness.</li>
+                    <li><strong>Sustainability:</strong> Eco-friendly practices for a healthier planet.</li>
+                </ul>
+                {% if request.path != '/about' %}
+                <a class="btn btn-primary py-3 px-5 mt-3" href = "{% url 'about' %}">Read More</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
